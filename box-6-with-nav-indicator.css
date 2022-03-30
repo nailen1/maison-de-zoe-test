@@ -124,13 +124,14 @@ header .product {
   background: linear-gradient(to bottom, #ff4f8b, #dff1ff);
   overflow: hidden;
 }
-
+#contact .color,
 #gift .color,
 #menu .color,
 #home .color {
   position: absolute;
   filter: blur(150px);
 }
+#contact .color:nth-child(1),
 #gift .color:nth-child(1),
 #menu .color:nth-child(1),
 #home .color:nth-child(1) {
@@ -139,6 +140,7 @@ header .product {
   width: 600px;
   height: 600px;
 }
+#contact .color:nth-child(2),
 #gift .color:nth-child(2),
 #menu .color:nth-child(2),
 #home .color:nth-child(2) {
@@ -147,6 +149,7 @@ header .product {
   width: 500px;
   height: 500px;
 }
+#contact .color:nth-child(3),
 #gift .color:nth-child(3),
 #menu .color:nth-child(3),
 #home .color:nth-child(3) {
@@ -732,7 +735,6 @@ header .product {
   margin-bottom: 3vh;
   /* border: 1px dashed green; */
 }
-#contact .contentText,
 #home .contentText {
   position: relative;
   /* max-height: 30vh; */
@@ -792,22 +794,6 @@ header .product {
   /* padding: 5px; */
   /* border: 1px dashed yellow; */
 }
-
-#order .container {
-  position: absolute;
-  top: 15vh;
-  width: 92%;
-  margin: 0 20px;
-  height: 60vh;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(px, 1fr));
-  /* border: 5px dashed red; */
-  grid-gap: 20px;
-  justify-items: center;
-  align-items: center;
-  overflow-y: scroll;
-}
 .top-center {
   display: grid;
   justify-items: center;
@@ -837,6 +823,21 @@ header .product {
   color: #e06178;
   letter-spacing: 1px;
 }
+#order .container {
+  position: absolute;
+  top: 15vh;
+  width: 92%;
+  margin: 0 20px;
+  height: 65vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(px, 1fr));
+  /* border: 5px dashed red; */
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: center;
+  overflow-y: scroll;
+}
 #order .container .box {
   position: relative;
   width: 80%;
@@ -858,6 +859,7 @@ header .product {
   /* padding: 5px; */
   /* border: 1px dashed yellow; */
 }
+
 #order .top-center img {
   position: absolute;
   top: 0;
@@ -888,18 +890,39 @@ header .product {
 
 #contact .container {
   position: absolute;
-  top: 0;
+  display: flex;
+  flex-direction: column;
+  top: 15vh;
+  width: 100%;
+  padding: 5% 8%;
+  height: 65vh;
+  overflow-y: scroll;
 }
-#contact img {
-  position: absolute;
-  top: 0;
-  height: 100vh;
+#contact .container div {
+  margin: 2vh;
 }
-#contact .contentText p {
-  color: antiquewhite;
-  background: #ff4f8b;
+#contact .container div ion-icon {
+  font-size: 2em;
+  /* border: 1px dashed red; */
+  margin: 0 10px;
+  color: #ff5d8f;
+  background: antiquewhite;
+  border-radius: 10%;
+  border: 1px #ff5d8f;
+}
+#contact .container div .title {
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 400;
+  margin: 5px 10px;
+  color: #ff5d8f;
+  border-bottom: 1px solid #ff5d8f;
+  /* border: 1px dashed green; */
+}
+#contact .container div .content {
+  font-size: 1em;
+  font-weight: 200;
+  margin: 0 10px;
+  /* border: 1px dashed green; */
 }
 
 .middle-left {
